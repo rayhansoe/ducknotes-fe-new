@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-50 font-Inter;
+	}
+}
+
+@layer components {
+	.btn {
+		@apply flex w-min justify-center items-center align-middle text-center gap-[6px] min-w-max bg-gray-900 font-semibold text-gray-50 shadow rounded-[14px] hover:bg-gray-700 hover:shadow-md active:bg-gray-600 active:shadow-md dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-300 dark:hover:shadow-md dark:active:bg-gray-400 dark:active:shadow-md;
+	}
+
+	.btn-xs {
+		@apply btn text-sm px-3 py-[6px];
+	}
+
+	.btn-sm {
+		@apply btn text-sm px-4 py-2;
+	}
+
+	.btn-base {
+		@apply btn text-base px-5 py-[10px];
+	}
+
+	.btn-md {
+		@apply btn text-base px-6 py-3;
+	}
+
+	.btn-lg {
+		@apply btn text-lg px-7 py-[14px];
+	}
+
+	.btn-xl {
+		@apply btn text-lg px-8 py-4;
+	}
+
+	.btn-2xl {
+		@apply btn text-xl px-9 py-[18px];
+	}
+
+	.cta {
+		@apply bg-blue-600 text-gray-50 hover:bg-blue-500 active:bg-blue-400;
+	}
+
+	.wide {
+		@apply flex-1 w-full max-w-xs;
+	}
+
+	.outlined {
+		@apply bg-gray-50 border-2 border-gray-900 text-gray-900 hover:bg-gray-600 active:bg-gray-500 dark:bg-gray-900 dark:text-gray-50 dark:border-gray-50 dark:hover:bg-gray-800 dark:active:bg-gray-700;
+	}
+
+	.oulined.cta,
+	.cta.outlined {
+		@apply text-blue-600 border-blue-600 hover:text-blue-500 hover:border-blue-500 active:border-blue-400 active:text-blue-400;
+	}
+
+	.btn-icon {
+		@apply btn cta p-[14px] rounded-full;
+	}
+
+	.icon-only {
+		@apply btn text-gray-50 bg-transparent px-2 rounded-none shadow-none hover:bg-transparent hover:shadow-none active:bg-transparent active:shadow-none;
+	}
+
+	.popover-items {
+		@apply flex min-w-max max-w-[200px] w-full rounded-lg bg-gray-50 text-base font-medium p-1 flex-col gap-1 justify-between;
+	}
+
+	.popover-item a {
+		@apply flex flex-row min-w-max w-full gap-2 items-center p-4 rounded-md cursor-pointer bg-gray-50 text-gray-900 hover:bg-blue-500 hover:text-white;
+		svg {
+			@apply text-blue-500;
+		}
+
+		&:hover {
+			svg {
+				@apply text-blue-100;
+			}
+		}
+	}
+}
